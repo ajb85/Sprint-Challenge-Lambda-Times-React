@@ -23,14 +23,12 @@ const Card = props => {
 
 // Make sure to include PropTypes.
 Card.propTypes = {
-  cards: PropTypes.arrayOf(
-    PropTypes.shape({
-      author: PropTypes.string.isRequired,
-      headline: PropTypes.string.isRequired,
-      img: PropTypes.string.isRequired,
-      tab: PropTypes.string.isRequired
-    })
-  )
+  card: PropTypes.shape({
+    author: PropTypes.string.isRequired,
+    headline: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    tab: PropTypes.string.isRequired
+  })
 };
 
 export default Card;
