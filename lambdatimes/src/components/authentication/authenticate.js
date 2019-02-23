@@ -7,7 +7,7 @@ updateState={this.updateState}
 username={this.state.username}
 */
 
-const authenticate = LogInPage => ContentPage =>
+const authenticate = DefaultPage => ContentPage =>
   class extends Component {
     render() {
       if (this.props.loggedIn) {
@@ -19,7 +19,7 @@ const authenticate = LogInPage => ContentPage =>
         }
         return <ContentPage username={this.props.username} />;
       }
-      return <LogInPage updateState={this.props.updateState} />;
+      return <DefaultPage updateState={this.props.updateState} />;
     }
   };
 

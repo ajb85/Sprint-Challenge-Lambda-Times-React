@@ -1,4 +1,5 @@
 import React from "react";
+import { Button, Card, CardTitle, CardBody } from "reactstrap";
 
 /*
 props:
@@ -85,18 +86,25 @@ export default class Login extends React.Component {
   render() {
     return (
       <div className="loginContainer">
-        <h1>Please Login to use your LT Account.</h1>
-        <h2>
-          Traditional news sites are a little obsolete so we need your monies!
-        </h2>
-        <form onSubmit={this.onLogin}>
-          <input type="text" placeholder="Account Name" />
-          <input type="password" placeholder="Password" />
-          <button type="submit">Login</button>
-          <button type="button" onClick={this.onCreateAccount}>
-            Create Account
-          </button>
-        </form>
+        <Card>
+          <CardTitle>Please Login to use your LT Account.</CardTitle>
+          <CardBody>
+            <form onSubmit={this.onLogin}>
+              <input type="text" placeholder="Account Name" />
+              <input type="password" placeholder="Password" />
+              <Button color="primary" type="submit">
+                Login
+              </Button>{" "}
+              <Button
+                color="secondary"
+                type="button"
+                onClick={this.onCreateAccount}
+              >
+                Create Account
+              </Button>{" "}
+            </form>
+          </CardBody>
+        </Card>
       </div>
     );
   }

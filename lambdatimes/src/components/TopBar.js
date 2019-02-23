@@ -10,7 +10,7 @@ import {
 // Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
-const TopBar = () => {
+const TopBar = props => {
   return (
     <TopBarStyled>
       <TBContainer>
@@ -26,7 +26,7 @@ const TopBar = () => {
           <span>ANNOUNCEMENTS</span>
         </TBCenter>
         <TBRight>
-          <span>LOG IN</span>
+          <span onClick={() => props.login("loggingIn", true)}>LOG IN</span>
         </TBRight>
       </TBContainer>
     </TopBarStyled>
